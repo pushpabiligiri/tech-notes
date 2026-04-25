@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>🔹 1. Resume Optimization Prompts &#8212; PushpaTechNotes v1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/code-tabs.css?v=1bc26e2f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=64b76554"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/code-tabs.js?v=c983d12e"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/jobHuntingPrompts/AI-Prompts-for-Job-Hunting';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This is a work in progress. Please check back later for updates.</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PushpaTechNotes v1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../java/index.html">Java Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-interview-questions.html">Java Interview Questions</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../spring/index.html">Spring Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/intro.html">Spring Boot Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/interview-questions.html">Spring Boot Interview Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/spring-boot-annotations.html">SpringBoot Annotations</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🔹 1. Resume Optimization Prompts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">🔹 1. Resume Optimization Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naukri-linkedin-profile-prompts">🔹 2. Naukri / LinkedIn Profile Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#job-application-prompts">🔹 3. Job Application Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recruiter-outreach-prompts">🔹 4. Recruiter Outreach Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#interview-preparation-prompts">🔹 5. Interview Preparation Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-explanation-prompts">🔹 6. Project Explanation Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#skill-gap-learning-prompts">🔹 7. Skill Gap &amp; Learning Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naukri-algorithm-strategy-prompt-very-useful">🔹 8. Naukri Algorithm Strategy Prompt (Very Useful)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-tip-most-important">🔹 Pro Tip (Most Important)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-english-fix">🔹 Small English Fix ✍️</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Using AI smartly can seriously speed up your job hunt—but only if your prompts are <strong>clear, role-focused, and specific</strong>. Here are <strong>powerful, ready-to-use AI prompts</strong> tailored for your profile (Java backend, 3+ years).</p>
+<hr class="docutils" />
+<section id="resume-optimization-prompts">
+<h1>🔹 1. Resume Optimization Prompts<a class="headerlink" href="#resume-optimization-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Improve your resume:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Act</span> <span class="k">as</span> <span class="n">a</span> <span class="n">recruiter</span> <span class="n">hiring</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Java</span> <span class="n">Backend</span> <span class="n">Developer</span> <span class="n">role</span><span class="o">.</span> 
+<span class="n">Review</span> <span class="n">my</span> <span class="n">resume</span> <span class="ow">and</span> <span class="n">suggest</span> <span class="n">improvements</span> <span class="n">to</span> <span class="n">make</span> <span class="n">it</span> <span class="n">more</span> <span class="n">ATS</span><span class="o">-</span><span class="n">friendly</span> <span class="ow">and</span> <span class="n">impactful</span><span class="o">.</span> 
+<span class="n">Focus</span> <span class="n">on</span> <span class="n">Spring</span> <span class="n">Boot</span><span class="p">,</span> <span class="n">Microservices</span><span class="p">,</span> <span class="n">REST</span> <span class="n">APIs</span><span class="p">,</span> <span class="ow">and</span> <span class="n">CI</span><span class="o">/</span><span class="n">CD</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Rewrite experience with impact:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rewrite</span> <span class="n">my</span> <span class="n">project</span> <span class="n">experience</span> <span class="n">using</span> <span class="n">strong</span> <span class="n">action</span> <span class="n">verbs</span> <span class="ow">and</span> <span class="n">include</span> <span class="n">measurable</span> <span class="n">impact</span> <span class="p">(</span><span class="n">performance</span><span class="p">,</span> <span class="n">scalability</span><span class="p">,</span> <span class="n">users</span> <span class="n">handled</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="naukri-linkedin-profile-prompts">
+<h1>🔹 2. Naukri / LinkedIn Profile Prompts<a class="headerlink" href="#naukri-linkedin-profile-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Optimize Naukri headline:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Generate</span> <span class="n">a</span> <span class="n">keyword</span><span class="o">-</span><span class="n">rich</span> <span class="n">Naukri</span> <span class="n">headline</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Software</span> <span class="n">Engineer</span> <span class="k">with</span> <span class="mi">3</span><span class="o">+</span> <span class="n">years</span> <span class="n">experience</span> <span class="ow">in</span> <span class="n">Java</span><span class="p">,</span> <span class="n">Spring</span> <span class="n">Boot</span><span class="p">,</span> <span class="n">Microservices</span><span class="p">,</span> <span class="n">REST</span> <span class="n">APIs</span><span class="p">,</span> <span class="n">Hibernate</span><span class="p">,</span> <span class="ow">and</span> <span class="n">CI</span><span class="o">/</span><span class="n">CD</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Improve LinkedIn About section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">a</span> <span class="n">professional</span> <span class="n">LinkedIn</span> <span class="n">summary</span> <span class="k">for</span> <span class="n">a</span> <span class="n">backend</span> <span class="n">developer</span> <span class="k">with</span> <span class="mi">3</span><span class="o">+</span> <span class="n">years</span> <span class="n">of</span> <span class="n">experience</span> <span class="ow">in</span> <span class="n">Java</span> <span class="ow">and</span> <span class="n">Spring</span> <span class="n">Boot</span><span class="p">,</span> <span class="n">focusing</span> <span class="n">on</span> <span class="n">achievements</span> <span class="ow">and</span> <span class="n">recruiter</span> <span class="n">visibility</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="job-application-prompts">
+<h1>🔹 3. Job Application Prompts<a class="headerlink" href="#job-application-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Tailor resume for a job:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Customize</span> <span class="n">my</span> <span class="n">resume</span> <span class="k">for</span> <span class="n">this</span> <span class="n">job</span> <span class="n">description</span><span class="p">:</span> <span class="p">[</span><span class="n">paste</span> <span class="n">JD</span><span class="p">]</span><span class="o">.</span> 
+<span class="n">Highlight</span> <span class="n">matching</span> <span class="n">skills</span> <span class="ow">and</span> <span class="n">suggest</span> <span class="n">missing</span> <span class="n">keywords</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Write job application email:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">a</span> <span class="n">professional</span> <span class="n">job</span> <span class="n">application</span> <span class="n">email</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Java</span> <span class="n">Backend</span> <span class="n">Developer</span> <span class="n">role</span> <span class="k">with</span> <span class="mi">3</span><span class="o">+</span> <span class="n">years</span> <span class="n">experience</span><span class="o">.</span> <span class="n">Keep</span> <span class="n">it</span> <span class="n">concise</span> <span class="ow">and</span> <span class="n">impactful</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="recruiter-outreach-prompts">
+<h1>🔹 4. Recruiter Outreach Prompts<a class="headerlink" href="#recruiter-outreach-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Message recruiter on LinkedIn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">a</span> <span class="n">short</span> <span class="n">LinkedIn</span> <span class="n">message</span> <span class="n">to</span> <span class="n">a</span> <span class="n">recruiter</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Java</span> <span class="n">backend</span> <span class="n">role</span><span class="o">.</span> 
+<span class="n">Mention</span> <span class="n">my</span> <span class="mi">3</span><span class="o">+</span> <span class="n">years</span> <span class="n">experience</span> <span class="ow">and</span> <span class="n">ask</span> <span class="n">about</span> <span class="n">relevant</span> <span class="n">openings</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Follow-up message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Write</span> <span class="n">a</span> <span class="n">polite</span> <span class="n">follow</span><span class="o">-</span><span class="n">up</span> <span class="n">message</span> <span class="n">to</span> <span class="n">a</span> <span class="n">recruiter</span> <span class="n">after</span> <span class="n">no</span> <span class="n">response</span> <span class="k">for</span> <span class="mi">3</span> <span class="n">days</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="interview-preparation-prompts">
+<h1>🔹 5. Interview Preparation Prompts<a class="headerlink" href="#interview-preparation-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Mock interview:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Act</span> <span class="k">as</span> <span class="n">an</span> <span class="n">interviewer</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Java</span> <span class="n">Backend</span> <span class="n">Developer</span> <span class="n">role</span> <span class="k">with</span> <span class="mi">3</span><span class="o">+</span> <span class="n">years</span> <span class="n">experience</span><span class="o">.</span> 
+<span class="n">Ask</span> <span class="n">me</span> <span class="n">technical</span> <span class="ow">and</span> <span class="n">scenario</span><span class="o">-</span><span class="n">based</span> <span class="n">questions</span> <span class="n">on</span> <span class="n">Spring</span> <span class="n">Boot</span><span class="p">,</span> <span class="n">Microservices</span><span class="p">,</span> <span class="ow">and</span> <span class="n">REST</span> <span class="n">APIs</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Answer improvement:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Improve</span> <span class="n">my</span> <span class="n">answer</span> <span class="k">for</span> <span class="n">this</span> <span class="n">interview</span> <span class="n">question</span><span class="p">:</span> <span class="p">[</span><span class="n">paste</span> <span class="n">your</span> <span class="n">answer</span><span class="p">]</span><span class="o">.</span> 
+<span class="n">Make</span> <span class="n">it</span> <span class="n">more</span> <span class="n">structured</span><span class="p">,</span> <span class="n">technical</span><span class="p">,</span> <span class="ow">and</span> <span class="n">confident</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="project-explanation-prompts">
+<h1>🔹 6. Project Explanation Prompts<a class="headerlink" href="#project-explanation-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Make projects interview-ready:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rewrite</span> <span class="n">my</span> <span class="n">project</span> <span class="n">explanation</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">structured</span> <span class="n">way</span> <span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="n">tech</span> <span class="n">stack</span><span class="p">,</span> <span class="n">impact</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="n">backend</span> <span class="n">developer</span> <span class="n">interview</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Add depth:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Add</span> <span class="n">technical</span> <span class="n">depth</span> <span class="n">to</span> <span class="n">my</span> <span class="n">project</span> <span class="n">by</span> <span class="n">including</span> <span class="n">design</span> <span class="n">decisions</span><span class="p">,</span> <span class="n">challenges</span> <span class="n">faced</span><span class="p">,</span> <span class="ow">and</span> <span class="n">optimizations</span> <span class="n">done</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="skill-gap-learning-prompts">
+<h1>🔹 7. Skill Gap &amp; Learning Prompts<a class="headerlink" href="#skill-gap-learning-prompts" title="Link to this heading">#</a></h1>
+<p>👉 Identify missing skills:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Based</span> <span class="n">on</span> <span class="n">current</span> <span class="n">market</span> <span class="n">demand</span> <span class="k">for</span> <span class="n">Java</span> <span class="n">backend</span> <span class="n">developers</span><span class="p">,</span> <span class="n">suggest</span> <span class="n">skills</span> <span class="n">I</span> <span class="n">should</span> <span class="n">learn</span> <span class="nb">next</span> <span class="p">(</span><span class="n">Docker</span><span class="p">,</span> <span class="n">Kubernetes</span><span class="p">,</span> <span class="n">System</span> <span class="n">Design</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>👉 Learning roadmap:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">a</span> <span class="mi">30</span><span class="o">-</span><span class="n">day</span> <span class="n">roadmap</span> <span class="n">to</span> <span class="n">improve</span> <span class="n">my</span> <span class="n">backend</span> <span class="n">development</span> <span class="n">skills</span> <span class="n">focusing</span> <span class="n">on</span> <span class="n">Spring</span> <span class="n">Boot</span><span class="p">,</span> <span class="n">Microservices</span><span class="p">,</span> <span class="ow">and</span> <span class="n">system</span> <span class="n">design</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="naukri-algorithm-strategy-prompt-very-useful">
+<h1>🔹 8. Naukri Algorithm Strategy Prompt (Very Useful)<a class="headerlink" href="#naukri-algorithm-strategy-prompt-very-useful" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Explain</span> <span class="n">how</span> <span class="n">Naukri</span> <span class="n">search</span> <span class="ow">and</span> <span class="n">ranking</span> <span class="n">works</span> <span class="k">for</span> <span class="n">Java</span> <span class="n">developers</span> <span class="ow">and</span> <span class="n">suggest</span> <span class="n">specific</span> <span class="n">actions</span> <span class="n">to</span> <span class="n">improve</span> <span class="n">profile</span> <span class="n">visibility</span> <span class="ow">and</span> <span class="n">recruiter</span> <span class="n">reach</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="pro-tip-most-important">
+<h1>🔹 Pro Tip (Most Important)<a class="headerlink" href="#pro-tip-most-important" title="Link to this heading">#</a></h1>
+<p>Don’t just use generic prompts like:
+❌ “Improve my resume”</p>
+<p>Instead use:
+✅ “Improve my resume for Java backend roles focusing on Spring Boot and Microservices with measurable impact”</p>
+<p>👉 Specific prompts = better results</p>
+<hr class="docutils" />
+<section id="small-english-fix">
+<h2>🔹 Small English Fix ✍️<a class="headerlink" href="#small-english-fix" title="Link to this heading">#</a></h2>
+<p>Your phrase:</p>
+<blockquote>
+<div><p>AI Prompts for Job Hunting</p>
+</div></blockquote>
+<p>Better:</p>
+<blockquote>
+<div><p>AI prompts for job hunting</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>If you want, I can:</p>
+<ul class="simple">
+<li><p>Create <strong>custom prompts only for your resume</strong></p></li>
+<li><p>Run a <strong>mock interview with you</strong></p></li>
+<li><p>Or optimize your <strong>entire job search strategy (Naukri + LinkedIn + referrals)</strong></p></li>
+</ul>
+<p>Just tell me 👍</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">🔹 1. Resume Optimization Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naukri-linkedin-profile-prompts">🔹 2. Naukri / LinkedIn Profile Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#job-application-prompts">🔹 3. Job Application Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recruiter-outreach-prompts">🔹 4. Recruiter Outreach Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#interview-preparation-prompts">🔹 5. Interview Preparation Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-explanation-prompts">🔹 6. Project Explanation Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#skill-gap-learning-prompts">🔹 7. Skill Gap &amp; Learning Prompts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#naukri-algorithm-strategy-prompt-very-useful">🔹 8. Naukri Algorithm Strategy Prompt (Very Useful)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-tip-most-important">🔹 Pro Tip (Most Important)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-english-fix">🔹 Small English Fix ✍️</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pushpabiligiri@gmail.com
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, pushpabiligiri@gmail.com.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

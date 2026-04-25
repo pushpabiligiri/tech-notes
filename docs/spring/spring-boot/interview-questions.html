@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spring Boot Interview Question &#8212; PushpaTechNotes v1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code-tabs.css?v=1bc26e2f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=64b76554"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/code-tabs.js?v=c983d12e"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/spring/spring-boot/interview-questions';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="SpringBoot Annotations" href="spring-boot-annotations.html" />
+    <link rel="prev" title="Spring Boot Introduction" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This is a work in progress. Please check back later for updates.</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PushpaTechNotes v1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../java/index.html">Java Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../java/jvm.html">✅ JVM Memory Structure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Spring Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Spring Boot Introduction</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Spring Boot Interview Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-boot-annotations.html">SpringBoot Annotations</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Spring Boot Interview Question</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-jvm-memory-structure-work">How does JVM memory structure work?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-springboot-auto-configuration-works">How SpringBoot Auto-Configuration works?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-spring-bean">What is a Spring Bean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-spring-boot-starters">What are Spring Boot Starters?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explain-the-different-fetch-types-eager-vs-lazy">Explain the different fetch types — EAGER vs LAZY?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-cascadetype-and-when-do-you-use-it">What is CascadeType and when do you use it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-difference-between-save-and-saveandflush">What is the difference between save() and saveAndFlush()?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-you-perform-pagination-and-sorting-in-spring-data-jpa">How can you perform pagination and sorting in Spring Data JPA?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-query-and-param-used-for">What is @Query and @Param used for?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="spring-boot-interview-question">
+<h1>Spring Boot Interview Question<a class="headerlink" href="#spring-boot-interview-question" title="Link to this heading">#</a></h1>
+<section id="how-does-jvm-memory-structure-work">
+<h2>How does JVM memory structure work?<a class="headerlink" href="#how-does-jvm-memory-structure-work" title="Link to this heading">#</a></h2>
+<p>The <strong>JVM (Java Virtual Machine)</strong> divides memory into different areas to manage execution efficiently. <br> The main parts are: <br></p>
+<ul class="simple">
+<li><p>Heap</p></li>
+<li><p>Stack</p></li>
+<li><p>Metaspace</p></li>
+</ul>
+<p><strong>1. Heap Memory:</strong> Used to store <strong>objects and instance variables</strong></p>
+<p><strong>2. Stack Memory:</strong> Used for <strong>method execution</strong></p>
+<ul class="simple">
+<li><p>Each thread has its own stack</p></li>
+<li><p><strong>it Stores :</strong> Local variables, Method calls, Object references</p></li>
+<li><p>Works in <strong>LIFO (Last In First Out)</strong></p></li>
+</ul>
+<p><strong>3. Metaspace:</strong> Stores <strong>class-level information</strong></p>
+<ul class="simple">
+<li><p>Class metadata</p></li>
+<li><p>Method metadata</p></li>
+<li><p>Static variables</p></li>
+<li><p>Uses <strong>native memory (outside heap)</strong></p></li>
+<li><p>Introduced in Java 8 (replaced PermGen)</p></li>
+</ul>
+</section>
+<section id="how-springboot-auto-configuration-works">
+<h2>How SpringBoot Auto-Configuration works?<a class="headerlink" href="#how-springboot-auto-configuration-works" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;SpringBootApplication</span></code> is the entry point of a Spring Boot application.</p>
+<p>It internally includes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;Configuration</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;EnableAutoConfiguration</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;ComponentScan</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">&#64;EnableAutoConfiguration</span></code> automatically configures beans based on classpath dependencies using conditional annotations, which reduces manual configuration.”</p></li>
+</ul>
+</section>
+<section id="what-is-a-spring-bean">
+<h2>What is a Spring Bean?<a class="headerlink" href="#what-is-a-spring-bean" title="Link to this heading">#</a></h2>
+<p>A Spring Bean is an object that is created and managed by the Spring IoC container.</p>
+</section>
+<section id="what-are-spring-boot-starters">
+<h2>What are Spring Boot Starters?<a class="headerlink" href="#what-are-spring-boot-starters" title="Link to this heading">#</a></h2>
+<p>Spring Boot Starters are predefined dependency bundles that help developers quickly add common functionalities</p>
+</section>
+<section id="explain-the-different-fetch-types-eager-vs-lazy">
+<h2>Explain the different fetch types — EAGER vs LAZY?<a class="headerlink" href="#explain-the-different-fetch-types-eager-vs-lazy" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>FetchType.EAGER</strong>: Loads data immediately along with the parent entity</p></li>
+<li><p><strong>FetchType.LAZY</strong>: Loads data only when it is accessed</p></li>
+</ul>
+</section>
+<section id="what-is-cascadetype-and-when-do-you-use-it">
+<h2>What is CascadeType and when do you use it?<a class="headerlink" href="#what-is-cascadetype-and-when-do-you-use-it" title="Link to this heading">#</a></h2>
+<p>Any operations performed on a parent entity should be automatically applied to its related (child) entities
+It is useful when the child entity’s lifecycle depends on the parent.</p>
+</section>
+<section id="what-is-the-difference-between-save-and-saveandflush">
+<h2>What is the difference between save() and saveAndFlush()?<a class="headerlink" href="#what-is-the-difference-between-save-and-saveandflush" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>The save():</strong> stores the entity in the persistence context and writes it to the database at transaction commit</p></li>
+<li><p><strong>saveAndFlush():</strong> saves the entity and immediately flushes the changes to the database</p></li>
+</ul>
+</section>
+<section id="how-can-you-perform-pagination-and-sorting-in-spring-data-jpa">
+<h2>How can you perform pagination and sorting in Spring Data JPA?<a class="headerlink" href="#how-can-you-perform-pagination-and-sorting-in-spring-data-jpa" title="Link to this heading">#</a></h2>
+<p>Pagination is implemented using the Pageable interface, which allows fetching data in pages.
+Sorting is implemented using the Sort class.
+Both can be combined using PageRequest to retrieve paginated and sorted data efficiently. The result is returned as a Page object, which includes metadata like total elements and total pages.</p>
+<p>Difference between Pageable and Page?</p>
+<ul class="simple">
+<li><p>Pageable → input (request)</p></li>
+<li><p>Page → output (response with data + metadata)</p></li>
+</ul>
+</section>
+<section id="what-is-query-and-param-used-for">
+<h2>What is &#64;Query and &#64;Param used for?<a class="headerlink" href="#what-is-query-and-param-used-for" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>&#64;Query is used to write custom JPQL or native SQL queries inside a repository interface.</p></li>
+<li><p>&#64;Param is used to bind method parameters to query parameters in &#64;Query.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Spring Boot Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="spring-boot-annotations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SpringBoot Annotations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-jvm-memory-structure-work">How does JVM memory structure work?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-springboot-auto-configuration-works">How SpringBoot Auto-Configuration works?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-spring-bean">What is a Spring Bean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-spring-boot-starters">What are Spring Boot Starters?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explain-the-different-fetch-types-eager-vs-lazy">Explain the different fetch types — EAGER vs LAZY?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-cascadetype-and-when-do-you-use-it">What is CascadeType and when do you use it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-difference-between-save-and-saveandflush">What is the difference between save() and saveAndFlush()?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-you-perform-pagination-and-sorting-in-spring-data-jpa">How can you perform pagination and sorting in Spring Data JPA?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-query-and-param-used-for">What is @Query and @Param used for?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pushpabiligiri@gmail.com
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, pushpabiligiri@gmail.com.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

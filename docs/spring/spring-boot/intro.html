@@ -51,6 +51,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/spring/spring-boot/intro';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Spring Boot Interview Question" href="interview-questions.html" />
     <link rel="prev" title="Spring Notes" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="Python"/>
@@ -163,6 +164,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../java/index.html">Java Notes</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Spring Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Spring Boot Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interview-questions.html">Spring Boot Interview Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spring-boot-annotations.html">SpringBoot Annotations</a></li>
 </ul>
 </details></li>
 </ul>
@@ -281,29 +284,6 @@ document.write(`
 <h1>Spring Boot Introduction<a class="headerlink" href="#spring-boot-introduction" title="Link to this heading">#</a></h1>
 <section id="about-spring-boot">
 <h2>About Spring Boot<a class="headerlink" href="#about-spring-boot" title="Link to this heading">#</a></h2>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">Main.java</span></code></span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-<span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EvenOdd</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 5</span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-<span class="linenos"> 6</span><span class="w">        </span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="linenos"> 9</span><span class="w">        </span>
-<span class="linenos">10</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">11</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Even number&quot;</span><span class="p">);</span>
-<span class="linenos">12</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">13</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Odd number&quot;</span><span class="p">);</span>
-<span class="linenos">14</span><span class="w">        </span><span class="p">}</span>
-<span class="linenos">15</span><span class="w">        </span>
-<span class="linenos">16</span><span class="w">        </span><span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="linenos">17</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">18</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
 </section>
 </section>
 
@@ -326,6 +306,15 @@ document.write(`
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Spring Notes</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="interview-questions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Spring Boot Interview Question</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

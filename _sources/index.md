@@ -1,4 +1,4 @@
-# Revs Notes
+# Pushpa Notes
 
 ```{toctree}
 :maxdepth: 4
@@ -7,6 +7,7 @@
 
 docs/java/index
 docs/spring/index
+docs/jobHuntingPrompts/index
 ```
 
 :::{seealso}
