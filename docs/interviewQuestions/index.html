@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>✅ JVM Memory Structure &#8212; PushpaTechNotes v1.0 documentation</title>
+    <title>Interview Quesions &#8212; PushpaTechNotes v1.0 documentation</title>
   
   
   
@@ -48,11 +48,11 @@
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/code-tabs.js?v=c983d12e"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/java/jvm';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/interviewQuestions/index';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Spring Notes" href="../spring/index.html" />
-    <link rel="prev" title="Java Notes" href="index.html" />
+    <link rel="next" title="Java — High Priority ⭐" href="java-interview-questions-with-answers.html" />
+    <link rel="prev" title="SpringBoot Annotations" href="../spring/spring-boot/spring-boot-annotations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="Python"/>
   </head>
@@ -161,14 +161,32 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Java Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">✅ JVM Memory Structure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../java/index.html">Java Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-notes/java-basic.html">Java Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-notes/java-8-features.html">Java 8 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-notes/java-17-features.html">Java 17 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-notes/java-21-features.html">Java 21 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-notes/java-string.html">Java String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-notes/coding.html">Interview Coding Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java/java-interview-questions.html">Java Interview Questions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../spring/index.html">Spring Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/intro.html">Spring Boot Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/interview-questions.html">Spring Boot Interview Question</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/spring-boot-annotations.html">SpringBoot Annotations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Interview Quesions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="java-interview-questions-with-answers.html">Java — High Priority ⭐</a></li>
+
+
+
+
+
+
+
+
 </ul>
 </details></li>
 </ul>
@@ -248,9 +266,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -261,24 +277,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>✅ JVM Memory Structure</h1>
+    <h1>Interview Quesions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heap-memory">🔹 1. Heap Memory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-memory">🔹 2. Stack Memory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metaspace">🔹 3. Metaspace</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works-flow">🔹 How It Works (Flow)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">🔹 Common Errors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfect-interview-answer-short">🎯 Perfect Interview Answer (Short)</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -288,94 +291,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Here’s a <strong>clear, interview-ready explanation</strong> you can give 👇</p>
-<hr class="docutils" />
-<section id="jvm-memory-structure">
-<h1>✅ JVM Memory Structure<a class="headerlink" href="#jvm-memory-structure" title="Link to this heading">#</a></h1>
-<p>👉 The <strong>JVM (Java Virtual Machine)</strong> divides memory into different areas to manage execution efficiently. The main parts are:</p>
-<ul class="simple">
-<li><p>Heap</p></li>
-<li><p>Stack</p></li>
-<li><p>Metaspace</p></li>
-</ul>
-<hr class="docutils" />
-<section id="heap-memory">
-<h2>🔹 1. Heap Memory<a class="headerlink" href="#heap-memory" title="Link to this heading">#</a></h2>
-<p>👉 Used to store <strong>objects and instance variables</strong></p>
-<ul class="simple">
-<li><p>Shared across all threads</p></li>
-<li><p>Managed by <strong>Garbage Collector (GC)</strong></p></li>
-<li><p>Divided into:</p>
-<ul>
-<li><p>Young Generation (Eden + Survivor)</p></li>
-<li><p>Old Generation</p></li>
-</ul>
-</li>
-</ul>
-<p>📌 Example:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">();</span><span class="w"> </span><span class="c1">// object stored in heap</span>
-</pre></div>
+  <section id="interview-quesions">
+<h1>Interview Quesions<a class="headerlink" href="#interview-quesions" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
 </div>
-</section>
-<hr class="docutils" />
-<section id="stack-memory">
-<h2>🔹 2. Stack Memory<a class="headerlink" href="#stack-memory" title="Link to this heading">#</a></h2>
-<p>👉 Used for <strong>method execution</strong></p>
-<ul class="simple">
-<li><p>Each thread has its own stack</p></li>
-<li><p>Stores:</p>
-<ul>
-<li><p>Local variables</p></li>
-<li><p>Method calls</p></li>
-<li><p>Object references</p></li>
-</ul>
-</li>
-<li><p>Works in <strong>LIFO (Last In First Out)</strong></p></li>
-</ul>
-<p>📌 Example:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// stored in stack</span>
-</pre></div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="metaspace">
-<h2>🔹 3. Metaspace<a class="headerlink" href="#metaspace" title="Link to this heading">#</a></h2>
-<p>👉 Stores <strong>class-level information</strong></p>
-<ul class="simple">
-<li><p>Class metadata</p></li>
-<li><p>Method metadata</p></li>
-<li><p>Static variables</p></li>
-<li><p>Uses <strong>native memory (outside heap)</strong></p></li>
-<li><p>Introduced in Java 8 (replaced PermGen)</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="how-it-works-flow">
-<h2>🔹 How It Works (Flow)<a class="headerlink" href="#how-it-works-flow" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Class is loaded → stored in <strong>Metaspace</strong></p></li>
-<li><p>Method is called → stored in <strong>Stack</strong></p></li>
-<li><p>Objects are created → stored in <strong>Heap</strong></p></li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="common-errors">
-<h2>🔹 Common Errors<a class="headerlink" href="#common-errors" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Heap issue →</strong> <code class="docutils literal notranslate"><span class="pre">OutOfMemoryError</span></code></p></li>
-<li><p><strong>Stack issue →</strong> <code class="docutils literal notranslate"><span class="pre">StackOverflowError</span></code></p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="perfect-interview-answer-short">
-<h2>🎯 Perfect Interview Answer (Short)<a class="headerlink" href="#perfect-interview-answer-short" title="Link to this heading">#</a></h2>
-<p>👉 <em>“JVM memory is divided into Heap, Stack, and Metaspace. Heap stores objects, Stack manages method execution and local variables per thread, and Metaspace stores class metadata. This separation helps in efficient memory management and garbage collection.”</em></p>
-<hr class="docutils" />
-<p>If you want to go one level deeper, I can explain:
-✅ Garbage Collection (very important follow-up)
-✅ Heap tuning in real projects
-✅ Real-time debugging scenarios based on JVM memory</p>
-</section>
 </section>
 
 
@@ -390,20 +309,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="../spring/spring-boot/spring-boot-annotations.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Java Notes</p>
+        <p class="prev-next-title">SpringBoot Annotations</p>
       </div>
     </a>
     <a class="right-next"
-       href="../spring/index.html"
+       href="java-interview-questions-with-answers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Spring Notes</p>
+        <p class="prev-next-title">Java — High Priority ⭐</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -413,26 +332,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heap-memory">🔹 1. Heap Memory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stack-memory">🔹 2. Stack Memory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metaspace">🔹 3. Metaspace</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works-flow">🔹 How It Works (Flow)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">🔹 Common Errors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfect-interview-answer-short">🎯 Perfect Interview Answer (Short)</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

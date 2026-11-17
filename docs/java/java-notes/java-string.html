@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Java String &#8212; PushpaTechNotes v1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code-tabs.css?v=1bc26e2f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=64b76554"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/code-tabs.js?v=c983d12e"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/java/java-notes/java-string';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Interview Coding Questions" href="coding.html" />
+    <link rel="prev" title="Java 21 Features" href="java-21-features.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This is a work in progress. Please check back later for updates.</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PushpaTechNotes v1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Java Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="java-basic.html">Java Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-8-features.html">Java 8 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-17-features.html">Java 17 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-21-features.html">Java 21 Features</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Java String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coding.html">Interview Coding Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java-interview-questions.html">Java Interview Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../spring/index.html">Spring Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../spring/spring-boot/intro.html">Spring Boot Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spring/spring-boot/interview-questions.html">Spring Boot Interview Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spring/spring-boot/spring-boot-annotations.html">SpringBoot Annotations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../interviewQuestions/index.html">Interview Quesions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../interviewQuestions/java-interview-questions-with-answers.html">Java — High Priority ⭐</a></li>
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Java String</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string">String</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-of-creating-a-java-string">Ways Of Creating a Java String</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#immutable-string">Immutable String</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-pool">String Pool</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-methods">String Methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-interview-points">4. Important Interview Points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-builder">String Builder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-stringbuilder">Why do we use StringBuilder?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-create-stringbuilder">Different ways to create StringBuilder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-stringbuilder-methods">Important StringBuilder methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stringbuilder-capacity-important-interview-topic">StringBuilder capacity – Important interview topic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-vs-stringbuilder-vs-stringbuffer">String vs StringBuilder vs StringBuffer</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="java-string">
+<h1>Java String<a class="headerlink" href="#java-string" title="Link to this heading">#</a></h1>
+<section id="string">
+<h2>String<a class="headerlink" href="#string" title="Link to this heading">#</a></h2>
+<p>A String in Java is an object used to store a sequence of characters enclosed in double quotes.</p>
+<ul class="simple">
+<li><p>Strings are immutable, meaning their value cannot be changed after creation.</p></li>
+<li><p>Java provides a rich API for manipulation, comparison, and concatenation of strings.</p></li>
+</ul>
+<section id="ways-of-creating-a-java-string">
+<h3>Ways Of Creating a Java String<a class="headerlink" href="#ways-of-creating-a-java-string" title="Link to this heading">#</a></h3>
+<p>There are two ways to create a string in Java:</p>
+<p><strong>1. String literal (Static Memory)</strong><br />
+A string literal is created by assigning a sequence of characters directly to a String variable using double quotes. Java stores string literals in the <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">Constant</span> <span class="pre">Pool</span></code>, allowing identical string values to share the same object.<br />
+<strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">“</span><span class="n">GeeksforGeeks</span><span class="err">”</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>2. Using new keyword (Heap Memory)</strong>
+Using the <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">keyword</span></code> creates a new object in heap memory, even if the same string already exists in the pool.</p>
+<ul class="simple">
+<li><p>One object is created in the heap memory</p></li>
+<li><p>The string literal is stored in the string pool (if not already present)</p></li>
+<li><p>The reference variable points to the heap object, not the pool<br />
+<strong>Example:</strong></p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="p">(</span><span class="err">“</span><span class="n">GeeksforGeeks</span><span class="err">”</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="immutable-string">
+<h3>Immutable String<a class="headerlink" href="#immutable-string" title="Link to this heading">#</a></h3>
+<p>String objects are <strong>immutable</strong>,Once a string object is created its data or state can't be changed.<br />
+<strong>Example</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GFG</span><span class="p">{</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">str</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot; World&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello
+</pre></div>
+</div>
+</section>
+<section id="string-pool">
+<h3>String Pool<a class="headerlink" href="#string-pool" title="Link to this heading">#</a></h3>
+<p>The String Pool is a special area in heap memory where Java stores string literals. It helps save memory by reusing existing string objects when the same literal is used multiple times.<br />
+<strong>For example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Geeks&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Geeks&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="string-methods">
+<h3>String Methods<a class="headerlink" href="#string-methods" title="Link to this heading">#</a></h3>
+<p>Java provides several built-in methods in the <code class="docutils literal notranslate"><span class="pre">String</span></code> class to perform operations on Strings.<br />
+Package: <code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (no import required).</p>
+<p><strong>Important String Methods</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">length()</span></code></p></td>
+<td><p>Returns the number of characters</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">charAt()</span></code></p></td>
+<td><p>Returns character at a specified index</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">equals()</span></code></p></td>
+<td><p>Compares two Strings</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">equalsIgnoreCase()</span></code></p></td>
+<td><p>Compares Strings ignoring case</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">toUpperCase()</span></code></p></td>
+<td><p>Converts to uppercase</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">toLowerCase()</span></code></p></td>
+<td><p>Converts to lowercase</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">substring()</span></code></p></td>
+<td><p>Extracts part of a String</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">contains()</span></code></p></td>
+<td><p>Checks whether text exists</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">startsWith()</span></code></p></td>
+<td><p>Checks starting characters</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">endsWith()</span></code></p></td>
+<td><p>Checks ending characters</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">trim()</span></code></p></td>
+<td><p>Removes leading and trailing basic whitespace</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">strip()</span></code></p></td>
+<td><p>Removes leading and trailing Unicode whitespace</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">replace()</span></code></p></td>
+<td><p>Replaces characters or text</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">replaceAll()</span></code></p></td>
+<td><p>Replaces regex matches</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">replaceFirst()</span></code></p></td>
+<td><p>Replaces first regex match</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">split()</span></code></p></td>
+<td><p>Splits String into an array</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">indexOf()</span></code></p></td>
+<td><p>Finds first occurrence</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">lastIndexOf()</span></code></p></td>
+<td><p>Finds last occurrence</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isEmpty()</span></code></p></td>
+<td><p>Checks whether String is empty</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isBlank()</span></code></p></td>
+<td><p>Checks empty or whitespace-only String</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">concat()</span></code></p></td>
+<td><p>Joins two Strings</p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">compareTo()</span></code></p></td>
+<td><p>Compares Strings lexicographically</p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">compareToIgnoreCase()</span></code></p></td>
+<td><p>Compares ignoring case</p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">toCharArray()</span></code></p></td>
+<td><p>Converts String into character array</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">valueOf()</span></code></p></td>
+<td><p>Converts other data types into String</p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">intern()</span></code></p></td>
+<td><p>Returns canonical String from pool</p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">matches()</span></code></p></td>
+<td><p>Checks whether String matches a regex</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">repeat()</span></code></p></td>
+<td><p>Repeats String (Java 11+)</p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">join()</span></code></p></td>
+<td><p>Joins multiple Strings with delimiter</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">format()</span></code></p></td>
+<td><p>Formats a String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Java Code Examples</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringMethods</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java Developer&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w">          </span><span class="c1">// 14</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w">         </span><span class="c1">// J</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span><span class="w">     </span><span class="c1">// JAVA DEVELOPER</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">());</span><span class="w">     </span><span class="c1">// java developer</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w">   </span><span class="c1">// Java</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">));</span><span class="c1">// true</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">endsWith</span><span class="p">(</span><span class="s">&quot;per&quot;</span><span class="p">));</span><span class="w">   </span><span class="c1">// true</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Python&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Additional Useful String Methods</strong><br />
+<strong>matches()</strong>
+Checks whether the entire String matches a regular expression.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java123&quot;</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="s">&quot;[A-Za-z0-9]+&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">true</span>
+</pre></div>
+</div>
+<p><strong>repeat() – Java 11</strong><br />
+Repeats a String a specified number of times.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java &quot;</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Java<span class="w"> </span>Java<span class="w"> </span>Java
+</pre></div>
+</div>
+<p><strong>join()</strong><br />
+Joins multiple Strings using a delimiter.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">join</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Spring&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SQL&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Java-Spring-SQL
+</pre></div>
+</div>
+<p><strong>format()</strong><br />
+Formats a String using placeholders.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rahul&quot;</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Name: %s, Age: %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Name:<span class="w"> </span>Rahul,<span class="w"> </span>Age:<span class="w"> </span><span class="m">25</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="important-interview-points">
+<h2>4. Important Interview Points<a class="headerlink" href="#important-interview-points" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept</p></th>
+<th class="head"><p>Remember</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>String length</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str.length()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Array length</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">arr.length</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>String comparison</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">equals()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Reference comparison</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>String immutable</p></td>
+<td><p>Cannot modify existing String object</p></td>
+</tr>
+<tr class="row-odd"><td><p>StringBuilder</p></td>
+<td><p>Mutable, not synchronized</p></td>
+</tr>
+<tr class="row-even"><td><p>StringBuffer</p></td>
+<td><p>Mutable, synchronized</p></td>
+</tr>
+<tr class="row-odd"><td><p>String Pool</p></td>
+<td><p>Reuses String literals</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Interview preparation: Focus on <code class="docutils literal notranslate"><span class="pre">substring()</span></code>, <code class="docutils literal notranslate"><span class="pre">split()</span></code>, <code class="docutils literal notranslate"><span class="pre">replace()</span></code>, <code class="docutils literal notranslate"><span class="pre">equals()</span></code>, <code class="docutils literal notranslate"><span class="pre">compareTo()</span></code>, <code class="docutils literal notranslate"><span class="pre">indexOf()</span></code>, and <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>. These methods are particularly useful in Java coding questions.</p>
+</section>
+<section id="string-builder">
+<h2>String Builder<a class="headerlink" href="#string-builder" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> is a predefined class in Java used to create and modify strings without creating a new object for every modification.</p>
+<ul class="simple">
+<li><p>It is mutable (we can change its content).</p></li>
+<li><p>It is not thread-safe.</p></li>
+<li><p>It is generally faster than <code class="docutils literal notranslate"><span class="pre">StringBuffer</span></code>.</p></li>
+<li><p>It was introduced in Java 5.</p></li>
+<li><p>It belongs to the <code class="docutils literal notranslate"><span class="pre">java.lang</span></code> package.</p></li>
+</ul>
+<p>Syntax:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<section id="why-do-we-use-stringbuilder">
+<h3>Why do we use StringBuilder?<a class="headerlink" href="#why-do-we-use-stringbuilder" title="Link to this heading">#</a></h3>
+<p>StringBuilder modifies its existing content.</p>
+</section>
+<section id="different-ways-to-create-stringbuilder">
+<h3>Different ways to create StringBuilder<a class="headerlink" href="#different-ways-to-create-stringbuilder" title="Link to this heading">#</a></h3>
+<p><strong>Default constructor</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">capacity</span><span class="p">());</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">0</span>
+<span class="m">16</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> Default capacity is 16 characters.</p>
+<p><strong>Constructor with initial capacity</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">capacity</span><span class="p">());</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">30</span>
+</pre></div>
+</div>
+<p><strong>Constructor with String</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">capacity</span><span class="p">());</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Java
+<span class="m">4</span>
+<span class="m">20</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>Initial String length = 4.</p></li>
+<li><p>Default extra capacity = 16.</p></li>
+<li><p>Total capacity = 20.</p></li>
+</ul>
+</section>
+<section id="important-stringbuilder-methods">
+<h3>Important StringBuilder methods<a class="headerlink" href="#important-stringbuilder-methods" title="Link to this heading">#</a></h3>
+</section>
+<section id="stringbuilder-capacity-important-interview-topic">
+<h3>StringBuilder capacity – Important interview topic<a class="headerlink" href="#stringbuilder-capacity-important-interview-topic" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The default capacity of StringBuilder is 16.</p></li>
+<li><p>When the existing capacity is insufficient, Java increases the capacity automatically.
+<strong>Capacity formula:</strong><br />
+\[ NewCapacity = (OldCapacity \times 2) + 2 \]</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">capacity</span><span class="p">());</span>
+
+<span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;12345678901234567&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">capacity</span><span class="p">());</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">16</span>
+<span class="m">34</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>Initial capacity = 16.</p></li>
+<li><p>We append 17 characters.</p></li>
+<li><p>Required capacity = 17.</p></li>
+<li><p>New capacity = (16 × 2) + 2 = 34.</p></li>
+</ul>
+<p>This is the usual growth formula when the calculated capacity is sufficient; Java can choose a larger capacity when necessary.</p>
+</section>
+<section id="string-vs-stringbuilder-vs-stringbuffer">
+<h3>String vs StringBuilder vs StringBuffer<a class="headerlink" href="#string-vs-stringbuilder-vs-stringbuffer" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>String</p></th>
+<th class="head"><p>StringBuilder</p></th>
+<th class="head"><p>StringBuffer</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mutability</p></td>
+<td><p>Immutable</p></td>
+<td><p>Mutable</p></td>
+<td><p>Mutable</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thread safety</p></td>
+<td><p>Safe due to immutability</p></td>
+<td><p>Not thread-safe</p></td>
+<td><p>Thread-safe methods</p></td>
+</tr>
+<tr class="row-even"><td><p>Synchronization</p></td>
+<td><p>Not applicable</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Performance for repeated modifications</p></td>
+<td><p>Generally slower</p></td>
+<td><p>Generally faster</p></td>
+<td><p>Synchronization overhead</p></td>
+</tr>
+<tr class="row-even"><td><p>Introduced</p></td>
+<td><p>Java 1.0</p></td>
+<td><p>Java 5</p></td>
+<td><p>Java 1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Use case</p></td>
+<td><p>Fixed text</p></td>
+<td><p>Single-threaded modifications</p></td>
+<td><p>Shared synchronized modifications</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="java-21-features.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Java 21 Features</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="coding.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Interview Coding Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string">String</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-of-creating-a-java-string">Ways Of Creating a Java String</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#immutable-string">Immutable String</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-pool">String Pool</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-methods">String Methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-interview-points">4. Important Interview Points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string-builder">String Builder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-stringbuilder">Why do we use StringBuilder?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-ways-to-create-stringbuilder">Different ways to create StringBuilder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-stringbuilder-methods">Important StringBuilder methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stringbuilder-capacity-important-interview-topic">StringBuilder capacity – Important interview topic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-vs-stringbuilder-vs-stringbuffer">String vs StringBuilder vs StringBuffer</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pushpabiligiri@gmail.com
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, pushpabiligiri@gmail.com.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

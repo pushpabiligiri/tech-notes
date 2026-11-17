@@ -7,7 +7,7 @@
 
 docs/java/index
 docs/spring/index
-docs/jobHuntingPrompts/index
+docs/interviewQuestions/index
 ```
 
 :::{seealso}

@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Spring Notes" href="../spring/index.html" />
-    <link rel="prev" title="Java Notes" href="index.html" />
+    <link rel="prev" title="Interview Coding Questions" href="java-notes/coding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="Python"/>
   </head>
@@ -162,14 +162,31 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Java Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="java-notes/java-basic.html">Java Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-notes/java-8-features.html">Java 8 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-notes/java-17-features.html">Java 17 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-notes/java-21-features.html">Java 21 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-notes/java-string.html">Java String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-notes/coding.html">Interview Coding Questions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Java Interview Questions</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../spring/index.html">Spring Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/intro.html">Spring Boot Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/interview-questions.html">Spring Boot Interview Question</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spring/spring-boot/spring-boot-annotations.html">SpringBoot Annotations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interviewQuestions/index.html">Interview Quesions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interviewQuestions/java-interview-questions-with-answers.html">Java — High Priority ⭐</a></li>
+
+
+
+
+
+
+
+
 </ul>
 </details></li>
 </ul>
@@ -272,10 +289,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Java Interview Questions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-java-basics-must-be-strong">1. Core Java – Basics (Must be Strong)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-concepts">OOP Concepts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#java-basics">Java Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-java-basics">1. Core Java – Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#java-basics-and-oop-concepts">Java Basics and OOP Concepts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
 </ul>
 </li>
@@ -285,16 +300,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jvm-memory-management-important-for-3-years">5. JVM &amp; Memory Management (Important for 3+ years)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#java-8-features-must-for-interviews">6. Java 8+ Features (Must for Interviews)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-boot-very-important">7. Spring Boot (VERY IMPORTANT)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rest-api-microservices">8. REST API &amp; Microservices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-sql">9. Database &amp; SQL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-design-basic-level-for-3-yrs">10. System Design (Basic Level for 3+ yrs)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-problem-solving">1.  Coding / Problem Solving</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-scenario-questions-very-important">1.  Real-Time Scenario Questions (VERY IMPORTANT)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rest-api">8. REST API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microservices">9. Microservices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-security">10. Spring Security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-design-patterns">11. OOP + Design Patterns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-sql">12. Database &amp; SQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-kubernetes-backend-deployment">13. Docker &amp; Kubernetes — Backend Deployment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backend-scenario-based-questions">Backend Scenario-Based Questions</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-tip-important-for-you">🔥 Pro Tip (Important for You)</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -307,30 +320,27 @@ document.write(`
                   
   <section id="java-interview-questions">
 <h1>Java Interview Questions<a class="headerlink" href="#java-interview-questions" title="Link to this heading">#</a></h1>
-<section id="core-java-basics-must-be-strong">
-<h2>1. Core Java – Basics (Must be Strong)<a class="headerlink" href="#core-java-basics-must-be-strong" title="Link to this heading">#</a></h2>
-<section id="oop-concepts">
-<h3>OOP Concepts<a class="headerlink" href="#oop-concepts" title="Link to this heading">#</a></h3>
+<section id="core-java-basics">
+<h2>1. Core Java – Basics<a class="headerlink" href="#core-java-basics" title="Link to this heading">#</a></h2>
+<section id="java-basics-and-oop-concepts">
+<h3>Java Basics and OOP Concepts<a class="headerlink" href="#java-basics-and-oop-concepts" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>What are the 4 pillars of OOP?</p></li>
+<li><p>What are the main features of Java 8?</p></li>
+<li><p>What are the important features introduced in Java 17 and 21?</p></li>
+<li><p>Why is Java platform-independent?</p></li>
+<li><p>What are the 4 pillars of OOP with real-time examples?</p></li>
 <li><p>Difference between <strong>Abstraction vs Encapsulation</strong></p></li>
+<li><p>What is the difference between an abstract class and an interface?</p></li>
 <li><p>What is <strong>Polymorphism</strong>? Types?</p></li>
 <li><p>What is <strong>Inheritance</strong>? Types in Java</p></li>
-</ul>
-</section>
-<section id="java-basics">
-<h3>Java Basics<a class="headerlink" href="#java-basics" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Why is Java platform-independent?</p></li>
-<li><p>What is JVM, JRE, and JDK?</p></li>
-<li><p>Difference between <strong>== vs equals()</strong></p></li>
-<li><p>What is <strong>hashCode()</strong> and why is it important?</p></li>
 </ul>
 </section>
 <section id="strings">
 <h3>Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h3>
 <ul class="simple">
+<li><p>What is an immutable class? How do you create one?</p></li>
 <li><p>Why is <code class="docutils literal notranslate"><span class="pre">String</span></code> immutable?</p></li>
+<li><p>Difference between <code class="docutils literal notranslate"><span class="pre">==</span></code> vs <code class="docutils literal notranslate"><span class="pre">equals()</span></code></p></li>
 <li><p>Difference between <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code>, <code class="docutils literal notranslate"><span class="pre">StringBuffer</span></code></p></li>
 <li><p>What is String Pool?</p></li>
 </ul>
@@ -342,9 +352,15 @@ document.write(`
 <ul class="simple">
 <li><p>Difference between <strong>List, Set, Map</strong></p></li>
 <li><p>Difference between <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> vs <code class="docutils literal notranslate"><span class="pre">LinkedList</span></code></p></li>
+<li><p>Difference between HashMap and ConcurrentHashMap.</p></li>
 <li><p>How does <code class="docutils literal notranslate"><span class="pre">HashMap</span></code> work internally?</p></li>
 <li><p>What is <strong>hash collision</strong>?</p></li>
+<li><p>What is <strong>hashCode()</strong> and why is it important?</p></li>
+<li><p>What is the difference between <code class="docutils literal notranslate"><span class="pre">equals()</span></code> and <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code>?</p></li>
 <li><p>Difference between <code class="docutils literal notranslate"><span class="pre">HashMap</span></code> and <code class="docutils literal notranslate"><span class="pre">ConcurrentHashMap</span></code></p></li>
+<li><p>What happens when two keys have the same hashcode?</p></li>
+<li><p>What is the difference between HashSet and TreeSet?</p></li>
+<li><p>What is the difference between HashMap and Hashtable?</p></li>
 <li><p>Why <code class="docutils literal notranslate"><span class="pre">HashSet</span></code> does not allow duplicates?</p></li>
 <li><p>What is <strong>Comparable vs Comparator</strong>?</p></li>
 </ul>
@@ -362,6 +378,8 @@ document.write(`
 <li><p>What is <code class="docutils literal notranslate"><span class="pre">try-catch-finally</span></code>?</p></li>
 <li><p>Can finally block not execute?</p></li>
 <li><p>What is <code class="docutils literal notranslate"><span class="pre">throw</span></code> vs <code class="docutils literal notranslate"><span class="pre">throws</span></code>?</p></li>
+<li><p>How do you create a custom exception?</p></li>
+<li><p>What is try-with-resources?</p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -369,6 +387,8 @@ document.write(`
 <h2>4. Multithreading &amp; Concurrency (High Priority)<a class="headerlink" href="#multithreading-concurrency-high-priority" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>What is a thread?</p></li>
+<li><p>What is multithreading?</p></li>
+<li><p>Difference between Thread and Runnable.</p></li>
 <li><p>Difference between <code class="docutils literal notranslate"><span class="pre">Runnable</span></code> and <code class="docutils literal notranslate"><span class="pre">Callable</span></code></p></li>
 <li><p>What is synchronization?</p></li>
 <li><p>What is thread safety?</p></li>
@@ -409,6 +429,10 @@ document.write(`
 <li><p>What are <strong>Lambda expressions</strong>?</p></li>
 <li><p>What is <strong>Functional Interface</strong>?</p></li>
 <li><p>What is <strong>Stream API</strong>?</p></li>
+<li><p>Explain map(), filter(), and collect()?</p></li>
+<li><p>What is the difference between map() and flatMap()?</p></li>
+<li><p>What is Optional in Java?</p></li>
+<li></li>
 </ul>
 <p>👉 Advanced:</p>
 <ul class="simple">
@@ -421,110 +445,216 @@ document.write(`
 <section id="spring-boot-very-important">
 <h2>7. Spring Boot (VERY IMPORTANT)<a class="headerlink" href="#spring-boot-very-important" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p>What is Spring Framework?</p></li>
 <li><p>What is Spring Boot?</p></li>
+<li><p>Why do we use Spring Boot instead of traditional Spring?</p></li>
 <li><p>What is <strong>&#64;SpringBootApplication</strong>?</p></li>
 <li><p>What is <strong>Dependency Injection</strong>?</p></li>
-</ul>
-<p>👉 Core annotations:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;Component</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;Service</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;Repository</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;Autowired</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;RestController</span></code></p></li>
-</ul>
-<p>👉 Advanced:</p>
-<ul class="simple">
+<li><p>Explain constructor injection vs field injection.</p></li>
+<li><p>Why is constructor injection preferred over &#64;Autowired?</p></li>
+<li><p>What is a Spring Bean?</p></li>
+<li><p>What is the Spring Bean lifecycle?</p></li>
+<li><p>What is &#64;Component?</p></li>
+<li><p>Difference between &#64;Component, &#64;Service, and &#64;Repository.</p></li>
+<li><p>What is &#64;RestController?</p></li>
+<li><p>Difference between &#64;Controller and &#64;RestController.</p></li>
+<li><p>What is &#64;Autowired?</p></li>
+<li><p>What is &#64;Qualifier?</p></li>
+<li><p>What is &#64;Primary?</p></li>
+<li><p>What is &#64;Configuration?</p></li>
+<li><p>What is &#64;Bean?</p></li>
+<li><p>What is Spring Boot auto-configuration?</p></li>
 <li><p>How <strong>Auto-Configuration</strong> works?</p></li>
-<li><p>What is <strong>Spring Bean lifecycle</strong>?</p></li>
-<li><p>What is <strong>&#64;Bean vs &#64;Component</strong>?</p></li>
-<li><p>What is <strong>Spring Boot Actuator</strong>?</p></li>
+<li><p>What are Spring Boot starters?</p></li>
+<li><p>What is application.properties / application.yml?</p></li>
+<li><p>What are Spring Profiles?</p></li>
+<li><p>How do you configure different environments such as DEV, QA, and PROD?</p></li>
+<li><p>What is Spring Boot Actuator?</p></li>
+<li><p>What is &#64;Value?</p></li>
+<li><p>What is &#64;ConfigurationProperties?</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="rest-api-microservices">
-<h2>8. REST API &amp; Microservices<a class="headerlink" href="#rest-api-microservices" title="Link to this heading">#</a></h2>
+<section id="rest-api">
+<h2>8. REST API<a class="headerlink" href="#rest-api" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>What is REST?</p></li>
-<li><p>Difference between <strong>GET, POST, PUT, DELETE</strong></p></li>
+<li><p>What are the principles of REST?</p></li>
+<li><p>Difference between REST and SOAP.</p></li>
+<li><p>What are HTTP methods?</p></li>
+<li><p>Difference between <strong>GET, POST, PUT, PATCH, DELETE</strong></p></li>
+<li><p>What are HTTP status codes?</p></li>
 <li><p>What is <strong>idempotent API</strong>?</p></li>
+<li><p>What is idempotency?</p></li>
+<li><p>Which HTTP methods are idempotent?</p></li>
+<li><p>How do you create a REST API using Spring Boot?</p></li>
+<li><p>How do you consume another REST API from a Spring Boot application?</p></li>
+<li><p>What is OpenFeign?</p></li>
+<li><p>What is RestTemplate?</p></li>
+<li><p>What is WebClient?</p></li>
+<li><p>How do you handle exceptions globally in REST APIs?</p></li>
+<li><p>What is &#64;ControllerAdvice?</p></li>
+<li><p>What is &#64;ExceptionHandler?</p></li>
+<li><p>How do you validate request data?</p></li>
+<li><p>What is &#64;Valid?</p></li>
+<li><p>What is &#64;RequestBody?</p></li>
+<li><p>What is &#64;PathVariable?</p></li>
+<li><p>What is &#64;RequestParam?</p></li>
+<li><p>Difference between &#64;PathVariable and &#64;RequestParam.</p></li>
+<li><p>What is content negotiation?</p></li>
+<li><p>What is API versioning?</p></li>
+<li><p>How would you design a scalable REST API?</p></li>
 </ul>
-<p>👉 Advanced:</p>
+</section>
+<section id="microservices">
+<h2>9. Microservices<a class="headerlink" href="#microservices" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>How do microservices communicate?</p></li>
-<li><p>What is <strong>Feign Client</strong>?</p></li>
+<li><p>What are microservices?</p></li>
+<li><p>What are the advantages of microservices?</p></li>
+<li><p>What are the disadvantages of microservices?</p></li>
+<li><p>How do microservices communicate with each other?</p></li>
 <li><p>What is <strong>API Gateway</strong>?</p></li>
 <li><p>What is <strong>Service Discovery (Eureka)</strong>?</p></li>
+<li><p>What happens if the downstream service is unavailable? / How do you handle failures between microservices?</p></li>
+<li><p>What is circuit breaker?</p></li>
+<li><p>What is Resilience4j?</p></li>
+<li><p>What is retry mechanism?</p></li>
+<li><p>What is timeout?</p></li>
+<li><p>What is fallback?</p></li>
+<li><p>How do you secure microservices?</p></li>
+<li><p>What is distributed tracing?</p></li>
+<li><p>What is centralized logging?</p></li>
+<li><p>What is Spring Cloud Config?</p></li>
+<li><p>How do you manage configuration across multiple environments?</p></li>
+<li><p>What is Saga pattern?</p></li>
+<li><p>What is synchronous vs asynchronous communication?</p></li>
+<li><p>How would you monitor microservices?</p></li>
+<li><p>Explain the architecture of your current project.</p></li>
 </ul>
-<p>👉 Real scenario:</p>
-<blockquote>
-<div><p>How will two microservices communicate? (REST vs Messaging Queue)</p>
-</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="spring-security">
+<h2>10. Spring Security<a class="headerlink" href="#spring-security" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>What is Spring Security?</p></li>
+<li><p>What is authentication vs authorization?</p></li>
+<li><p>What is JWT?</p></li>
+<li><p>Explain JWT authentication flow.</p></li>
+<li><p>What are the three parts of a JWT?</p></li>
+<li><p>Where should JWT be sent in an HTTP request?</p></li>
+<li><p>What is Authorization: Bearer <token>?</p></li>
+<li><p>How do you implement JWT authentication in Spring Boot?</p></li>
+<li><p>What is a security filter?</p></li>
+<li><p>What is SecurityFilterChain?</p></li>
+<li><p>What is BCrypt?</p></li>
+<li><p>Why shouldn't we store passwords as plain text?</p></li>
+<li><p>How do you implement role-based authorization?</p></li>
+<li><p>Difference between authentication and authorization.</p></li>
+<li><p>What is CORS?</p></li>
+<li><p>What is CSRF?</p></li>
+<li><p>Difference between CORS and CSRF.</p></li>
+<li><p>How do you secure REST APIs?</p></li>
+<li><p>How do you handle expired JWT tokens?</p></li>
+<li><p>Where should secrets/passwords be stored?</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="oop-design-patterns">
+<h2>11. OOP + Design Patterns<a class="headerlink" href="#oop-design-patterns" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Explain SOLID principles.</p></li>
+<li><p>What are design patterns?</p></li>
+<li><p>Which design patterns have you used in your project?</p></li>
+<li><p>Where would you use the Factory pattern?</p></li>
+<li><p>How does Spring use design patterns internally?</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="database-sql">
-<h2>9. Database &amp; SQL<a class="headerlink" href="#database-sql" title="Link to this heading">#</a></h2>
+<h2>12. Database &amp; SQL<a class="headerlink" href="#database-sql" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p>What is a relational database?</p></li>
+<li><p>What is primary key?</p></li>
+<li><p>What is foreign key?</p></li>
 <li><p>Difference between <strong>SQL vs NoSQL</strong></p></li>
 <li><p>What is <strong>Normalization</strong>?</p></li>
+<li><p>Explain 1NF, 2NF and 3NF.</p></li>
+<li><p>Difference between INNER JOIN and LEFT JOIN.</p></li>
+<li><p>Difference between WHERE and HAVING.</p></li>
 <li><p>What are <strong>Indexes</strong>?</p></li>
-</ul>
-<p>👉 Advanced:</p>
-<ul class="simple">
-<li><p>How to optimize slow queries?</p></li>
+<li><p>Advantages and disadvantages of indexes.</p></li>
+<li><p>How do you improve a slow SQL query?</p></li>
+<li><p>What is a transaction?</p></li>
+<li><p>Explain ACID properties.</p></li>
+<li><p>What is transaction isolation?</p></li>
+<li><p>What is deadlock?</p></li>
+<li><p>How do you handle database deadlocks?</p></li>
+<li><p>What is connection pooling?</p></li>
+<li><p>What is HikariCP?</p></li>
+<li><p>How does Java connect to MySQL?</p></li>
+<li><p>What is JDBC?</p></li>
+<li><p>What is JPA?</p></li>
+<li><p>What is Hibernate?</p></li>
+<li><p>Difference between JPA and Hibernate.</p></li>
+<li><p>What is lazy loading?</p></li>
+<li><p>What is eager loading?</p></li>
 <li><p>What is <strong>N+1 problem</strong>?</p></li>
 <li><p>What is <strong>JPA/Hibernate</strong>?</p></li>
+<li><p>How do you handle transactions in Spring Boot?</p></li>
+<li><p>What does &#64;Transactional do?</p></li>
+<li><p>What is pagination?</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="system-design-basic-level-for-3-yrs">
-<h2>10. System Design (Basic Level for 3+ yrs)<a class="headerlink" href="#system-design-basic-level-for-3-yrs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>How would you design a <strong>URL shortener</strong>?</p></li>
-<li><p>How to design a <strong>scalable REST API</strong>?</p></li>
-<li><p>What is <strong>Caching</strong>?</p></li>
-</ul>
-<p>👉 Tools:</p>
-<ul class="simple">
-<li><p>Redis</p></li>
-<li><p>Kafka / RabbitMQ</p></li>
-</ul>
+<section id="docker-kubernetes-backend-deployment">
+<h2>13. Docker &amp; Kubernetes — Backend Deployment<a class="headerlink" href="#docker-kubernetes-backend-deployment" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>What is Docker?</p></li>
+<li><p>Why do we use Docker for backend applications?</p></li>
+<li><p>Docker image vs container.</p></li>
+<li><p>What is a Dockerfile?</p></li>
+<li><p>How do you Dockerize a Spring Boot application?</p></li>
+<li><p>What is Docker Compose?</p></li>
+<li><p>What is Kubernetes?</p></li>
+<li><p>What is a Kubernetes cluster?</p></li>
+<li><p>What is a Pod?</p></li>
+<li><p>What is a Deployment?</p></li>
+<li><p>What is a Service?</p></li>
+<li><p>Pod vs Deployment vs Service.</p></li>
+<li><p>What is ConfigMap?</p></li>
+<li><p>What is Secret?</p></li>
+<li><p>What is replica count?</p></li>
+<li><p>How do you check backend application logs in Kubernetes?</p></li>
+<li><p>How do you troubleshoot a restarting Pod?</p></li>
+</ol>
 </section>
 <hr class="docutils" />
-<section id="coding-problem-solving">
-<h2>1.  Coding / Problem Solving<a class="headerlink" href="#coding-problem-solving" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Reverse a String</p></li>
-<li><p>Remove duplicate characters</p></li>
-<li><p>Find first non-repeating character</p></li>
-<li><p>LRU Cache implementation</p></li>
-<li><p>Multithreading problems</p></li>
-</ul>
+<section id="backend-scenario-based-questions">
+<h2>Backend Scenario-Based Questions<a class="headerlink" href="#backend-scenario-based-questions" title="Link to this heading">#</a></h2>
+<p>These are very important for a 3–4 year developer:</p>
+<ol class="arabic simple">
+<li><p>Your REST API is taking 10 seconds to respond. How will you troubleshoot it?</p></li>
+<li><p>Your API suddenly starts returning 500 errors in production. What will you check?</p></li>
+<li><p>One microservice is down. How will you prevent cascading failures?</p></li>
+<li><p>A database query is taking 5 seconds. How will you optimize it?</p></li>
+<li><p>Your API is receiving 10,000 requests per minute. How would you handle the load?</p></li>
+<li><p>How would you implement pagination for a large database table?</p></li>
+<li><p>How would you prevent duplicate requests from creating duplicate records?</p></li>
+<li><p>How would you design an API for creating and retrieving employees?</p></li>
+<li><p>How would you secure an API containing sensitive information?</p></li>
+<li><p>A third-party API is intermittently failing. How would you handle it?</p></li>
+<li><p>How would you implement retry without causing excessive load?</p></li>
+<li><p>How would you handle concurrent updates to the same database record?</p></li>
+<li><p>How would you troubleshoot memory issues in a Java application?</p></li>
+<li><p>How would you troubleshoot high CPU usage in a Spring Boot application?</p></li>
+<li><p>How would you handle a database connection pool getting exhausted?</p></li>
+<li><p>How would you design communication between two microservices?</p></li>
+<li><p>How would you handle API backward compatibility?</p></li>
+<li><p>How would you design centralized exception handling?</p></li>
+<li><p>How would you improve the performance of an existing backend service?</p></li>
+<li><p>Explain a challenging backend issue you solved in your project.</p></li>
+</ol>
 </section>
-<hr class="docutils" />
-<section id="real-time-scenario-questions-very-important">
-<h2>1.  Real-Time Scenario Questions (VERY IMPORTANT)<a class="headerlink" href="#real-time-scenario-questions-very-important" title="Link to this heading">#</a></h2>
-<p>These are asked most for 3+ years 👇</p>
-<ul class="simple">
-<li><p>Your API is slow in production. How will you fix it?</p></li>
-<li><p>Your application has memory leak. What will you do?</p></li>
-<li><p>How do you handle high traffic in your system?</p></li>
-<li><p>How do you ensure thread safety in real applications?</p></li>
-<li><p>How do you design logging in microservices?</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="pro-tip-important-for-you">
-<h1>🔥 Pro Tip (Important for You)<a class="headerlink" href="#pro-tip-important-for-you" title="Link to this heading">#</a></h1>
-<p>Since you are targeting <strong>Java Backend (Spring Boot)</strong> roles:</p>
-<p>👉 Focus more on:</p>
-<ul class="simple">
-<li><p>Collections internal working</p></li>
-<li><p>Multithreading</p></li>
-<li><p>JVM memory</p></li>
-<li><p>Spring Boot internals</p></li>
-<li><p>Microservices communication</p></li>
-</ul>
-<hr class="docutils" />
 </section>
 
 
@@ -539,12 +669,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="java-notes/coding.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Java Notes</p>
+        <p class="prev-next-title">Interview Coding Questions</p>
       </div>
     </a>
     <a class="right-next"
@@ -572,10 +702,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Java Interview Questions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-java-basics-must-be-strong">1. Core Java – Basics (Must be Strong)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-concepts">OOP Concepts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#java-basics">Java Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-java-basics">1. Core Java – Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#java-basics-and-oop-concepts">Java Basics and OOP Concepts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
 </ul>
 </li>
@@ -585,16 +713,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jvm-memory-management-important-for-3-years">5. JVM &amp; Memory Management (Important for 3+ years)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#java-8-features-must-for-interviews">6. Java 8+ Features (Must for Interviews)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-boot-very-important">7. Spring Boot (VERY IMPORTANT)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rest-api-microservices">8. REST API &amp; Microservices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-sql">9. Database &amp; SQL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-design-basic-level-for-3-yrs">10. System Design (Basic Level for 3+ yrs)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-problem-solving">1.  Coding / Problem Solving</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-scenario-questions-very-important">1.  Real-Time Scenario Questions (VERY IMPORTANT)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rest-api">8. REST API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microservices">9. Microservices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-security">10. Spring Security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-design-patterns">11. OOP + Design Patterns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-sql">12. Database &amp; SQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-kubernetes-backend-deployment">13. Docker &amp; Kubernetes — Backend Deployment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backend-scenario-based-questions">Backend Scenario-Based Questions</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-tip-important-for-you">🔥 Pro Tip (Important for You)</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

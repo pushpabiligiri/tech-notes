@@ -1,0 +1,1557 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Java Basics &#8212; PushpaTechNotes v1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code-tabs.css?v=1bc26e2f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=64b76554"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/code-tabs.js?v=c983d12e"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/java/java-notes/java-basic';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Java 8 Features" href="java-8-features.html" />
+    <link rel="prev" title="Java Notes" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This is a work in progress. Please check back later for updates.</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PushpaTechNotes v1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Java Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Java Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-8-features.html">Java 8 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-17-features.html">Java 17 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-21-features.html">Java 21 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="java-string.html">Java String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coding.html">Interview Coding Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../java-interview-questions.html">Java Interview Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../spring/index.html">Spring Notes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../spring/spring-boot/intro.html">Spring Boot Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spring/spring-boot/interview-questions.html">Spring Boot Interview Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spring/spring-boot/spring-boot-annotations.html">SpringBoot Annotations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../interviewQuestions/index.html">Interview Quesions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../interviewQuestions/java-interview-questions-with-answers.html">Java — High Priority ⭐</a></li>
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Java Basics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-concepts">OOP concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulation">Encapsulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">Inheritance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphism">Polymorphism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstraction">Abstraction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-arrays-in-java">Types of Arrays in Java</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-array">One-Dimensional Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-methods">Array Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-important-array-methods">Examples of Important Array Methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract-class">Abstract class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-abstract-classes">Why do we use Abstract Classes?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface">Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-interfaces">Why do we use Interfaces?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-rules-of-interfaces">Important Rules of Interfaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-methods-in-interface">Types of Methods in Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-inheritance-using-interfaces">Multiple Inheritance Using Interfaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract-class-vs-interface">Abstract Class vs interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-interview-scenario-same-method-in-two-interfaces">Important Interview Scenario: Same Method in Two Interfaces</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="java-basics">
+<h1>Java Basics<a class="headerlink" href="#java-basics" title="Link to this heading">#</a></h1>
+<p>JDK, JRE, and JVM<br />
+this &amp; super keyword</p>
+<section id="oop-concepts">
+<h2>OOP concepts<a class="headerlink" href="#oop-concepts" title="Link to this heading">#</a></h2>
+<p>There are four main pillars of OOPs:</p>
+<ol class="arabic simple">
+<li><p>Encapsulation</p></li>
+<li><p>Inheritance</p></li>
+<li><p>Polymorphism</p></li>
+<li><p>Abstraction</p></li>
+</ol>
+<section id="encapsulation">
+<h3>Encapsulation<a class="headerlink" href="#encapsulation" title="Link to this heading">#</a></h3>
+<p>Encapsulation means wrapping data (variables) and methods into a single unit (class) and restricting direct access to data.<br />
+We achieve encapsulation using:</p>
+<ul class="simple">
+<li><p>Private variables.</p></li>
+<li><p>Public getter and setter methods.</p></li>
+</ul>
+<p><strong>Real-time example:</strong> ATM machine<br />
+When we use an ATM:</p>
+<ul class="simple">
+<li><p>We cannot directly access the bank account balance.</p></li>
+<li><p>We can check the balance using an ATM option.</p></li>
+<li><p>We can deposit or withdraw money through permitted operations.</p></li>
+<li><p>The account balance is protected from direct modification.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">BankAccount</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getBalance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">BankAccount</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BankAccount</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">deposit</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">withdraw</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">account</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">13000</span>.0
+</pre></div>
+</div>
+<p>Interview point: Encapsulation is mainly used for data hiding and data protection.</p>
+</section>
+<section id="inheritance">
+<h3>Inheritance<a class="headerlink" href="#inheritance" title="Link to this heading">#</a></h3>
+<p>Inheritance means one class can acquire the properties and methods of another class.<br />
+We use the <code class="docutils literal notranslate"><span class="pre">extends</span></code> keyword for class inheritance.</p>
+<p><strong>Real-time example:</strong> Employee Management System<br />
+Imagine an organization has different types of employees:</p>
+<ul class="simple">
+<li><p>Developer</p></li>
+<li><p>Manager</p></li>
+<li><p>Tester</p></li>
+</ul>
+<p>All employees have common properties:</p>
+<ul class="simple">
+<li><p>Employee ID</p></li>
+<li><p>Employee name</p></li>
+<li><p>Salary</p></li>
+</ul>
+<p>Instead of writing the same code in every class, we create a common <code class="docutils literal notranslate"><span class="pre">Employee</span></code> parent class.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Employee</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">empId</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayDetails</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">empId</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Developer</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Employee</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Developer writes Java code&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Manager</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Employee</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">manageTeam</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Manager manages the team&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Developer</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Developer</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">dev</span><span class="p">.</span><span class="na">empId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span>
+<span class="w">        </span><span class="n">dev</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rahul&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">dev</span><span class="p">.</span><span class="na">displayDetails</span><span class="p">();</span>
+<span class="w">        </span><span class="n">dev</span><span class="p">.</span><span class="na">writeCode</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Manager</span><span class="w"> </span><span class="n">manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Manager</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">manager</span><span class="p">.</span><span class="na">empId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">102</span><span class="p">;</span>
+<span class="w">        </span><span class="n">manager</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Priya&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">manager</span><span class="p">.</span><span class="na">displayDetails</span><span class="p">();</span>
+<span class="w">        </span><span class="n">manager</span><span class="p">.</span><span class="na">manageTeam</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">101</span>
+Rahul
+Developer<span class="w"> </span>writes<span class="w"> </span>Java<span class="w"> </span>code
+<span class="m">102</span>
+Priya
+Manager<span class="w"> </span>manages<span class="w"> </span>the<span class="w"> </span>team
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Employee</span></code> is the parent class.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Developer</span></code> and <code class="docutils literal notranslate"><span class="pre">Manager</span></code> are child classes.</p></li>
+<li><p>Both child classes reuse the properties and methods of Employee.</p></li>
+<li><p>We avoid duplicate code.
+Interview point: Inheritance promotes code reusability.</p></li>
+</ul>
+<p><strong>Types of inheritance in Java</strong></p>
+<ol class="arabic simple">
+<li><p>Single inheritance – One parent and one child.</p></li>
+<li><p>Multilevel inheritance – A class inherits from another child class.</p></li>
+<li><p>Hierarchical inheritance – Multiple child classes inherit from one parent.</p></li>
+<li><p>Multiple inheritance – Not supported through classes in Java, but possible through interfaces.</p></li>
+<li><p>Hybrid inheritance – Can be achieved using interfaces.</p></li>
+</ol>
+</section>
+<section id="polymorphism">
+<h3>Polymorphism<a class="headerlink" href="#polymorphism" title="Link to this heading">#</a></h3>
+<p>Polymorphism means one name having multiple forms.<br />
+In Java, polymorphism is mainly divided into two types:</p>
+<p><strong>A. Compile-time polymorphism (Method Overloading)</strong><br />
+<strong>Real-time example:</strong> Payment System<br />
+In an application, we can make payments using different methods:</p>
+<ul class="simple">
+<li><p>UPI</p></li>
+<li><p>Credit card</p></li>
+<li><p>Debit card</p></li>
+</ul>
+<p>We can use the same method name <code class="docutils literal notranslate"><span class="pre">makePayment()</span></code> with different parameters.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Payment</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">makePayment</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">upiId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Payment through UPI: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">upiId</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">makePayment</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">cardNumber</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Payment through Card: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cardNumber</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">makePayment</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">upiId</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;UPI Payment amount: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Payment</span><span class="w"> </span><span class="n">payment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Payment</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">payment</span><span class="p">.</span><span class="na">makePayment</span><span class="p">(</span><span class="s">&quot;rahul@upi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">payment</span><span class="p">.</span><span class="na">makePayment</span><span class="p">(</span><span class="mi">1234567890123456L</span><span class="p">);</span>
+<span class="w">        </span><span class="n">payment</span><span class="p">.</span><span class="na">makePayment</span><span class="p">(</span><span class="s">&quot;rahul@upi&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Payment<span class="w"> </span>through<span class="w"> </span>UPI:<span class="w"> </span>rahul@upi
+Payment<span class="w"> </span>through<span class="w"> </span>Card:<span class="w"> </span><span class="m">1234567890123456</span>
+UPI<span class="w"> </span>Payment<span class="w"> </span>amount:<span class="w"> </span><span class="m">5000</span>.0
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>Same method name: <code class="docutils literal notranslate"><span class="pre">makePayment()</span></code>.</p></li>
+<li><p>Different parameters.</p></li>
+<li><p>The compiler identifies which method to call based on the arguments.</p></li>
+</ul>
+<p>Interview point: Method overloading is compile-time polymorphism.</p>
+<p><strong>B. Runtime polymorphism (Method Overriding)</strong><br />
+<strong>Real-time example:</strong> Notification System<br />
+An application sends notifications through different channels:</p>
+<ul class="simple">
+<li><p>Email</p></li>
+<li><p>SMS</p></li>
+<li><p>WhatsApp</p></li>
+</ul>
+<p>All notification classes have the same method <code class="docutils literal notranslate"><span class="pre">sendNotification()</span></code>, but each class provides its own implementation.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Notification</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendNotification</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sending notification&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Email</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Notification</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendNotification</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sending Email&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">SMS</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Notification</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendNotification</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sending SMS&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Notification</span><span class="w"> </span><span class="n">notification</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">notification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Email</span><span class="p">();</span>
+<span class="w">        </span><span class="n">notification</span><span class="p">.</span><span class="na">sendNotification</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">notification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SMS</span><span class="p">();</span>
+<span class="w">        </span><span class="n">notification</span><span class="p">.</span><span class="na">sendNotification</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Sending<span class="w"> </span>Email
+Sending<span class="w"> </span>SMS
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Notification</span></code> is the parent class.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Email</span></code> and <code class="docutils literal notranslate"><span class="pre">SMS</span></code> override the parent method.</p></li>
+<li><p>Parent reference holds child objects.</p></li>
+<li><p>JVM decides which overridden method to execute at runtime based on the actual object.</p></li>
+</ul>
+<p>Interview point: Method overriding is runtime polymorphism.</p>
+</section>
+<section id="abstraction">
+<h3>Abstraction<a class="headerlink" href="#abstraction" title="Link to this heading">#</a></h3>
+<p>Abstraction means hiding implementation details and showing only essential functionality to the user.<br />
+We achieve abstraction using:</p>
+<ol class="arabic simple">
+<li><p>Abstract classes.</p></li>
+<li><p>Interfaces.</p></li>
+</ol>
+<p><strong>Real-time example:</strong> Online Banking Application
+When we transfer money:</p>
+<ul class="simple">
+<li><p>We enter the amount.</p></li>
+<li><p>We select the beneficiary.</p></li>
+<li><p>We click the transfer button.</p></li>
+</ul>
+<p>We don't need to know the internal implementation of how the bank processes the transaction.</p>
+<p><strong>Example using Abstract Class:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bank</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">transferMoney</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">login</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;User logged in&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">SBI</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Bank</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">transferMoney</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Money transferred through SBI&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">HDFC</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Bank</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">transferMoney</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Money transferred through HDFC&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Bank</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SBI</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">bank</span><span class="p">.</span><span class="na">login</span><span class="p">();</span>
+<span class="w">        </span><span class="n">bank</span><span class="p">.</span><span class="na">transferMoney</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>User<span class="w"> </span>logged<span class="w"> </span><span class="k">in</span>
+Money<span class="w"> </span>transferred<span class="w"> </span>through<span class="w"> </span>SBI
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Bank</span></code> is an abstract class.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transferMoney()</span></code> is an abstract method without implementation.</p></li>
+<li><p>SBI and HDFC provide their own implementations.</p></li>
+<li><p>The user interacts with the common functionality without needing to know its internal implementation.</p></li>
+</ul>
+<p>Interview point: Abstraction hides implementation details and exposes essential functionality.</p>
+</section>
+</section>
+<section id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Link to this heading">#</a></h2>
+<p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+<section id="types-of-arrays-in-java">
+<h3>Types of Arrays in Java<a class="headerlink" href="#types-of-arrays-in-java" title="Link to this heading">#</a></h3>
+<p>Java supports three common array structures:</p>
+<ol class="arabic simple">
+<li><p>One-dimensional array</p></li>
+<li><p>Two-dimensional array</p></li>
+<li><p>Multidimensional array</p></li>
+</ol>
+</section>
+<section id="one-dimensional-array">
+<h3>One-Dimensional Array<a class="headerlink" href="#one-dimensional-array" title="Link to this heading">#</a></h3>
+<p>An array that stores elements in a single row.<br />
+Declaration:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Initialization:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+</pre></div>
+</div>
+<p>Accessing elements:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">10</span>
+<span class="m">30</span>
+<span class="m">50</span>
+</pre></div>
+</div>
+<p>Remember:</p>
+<ul class="simple">
+<li><p>Array indexing starts from <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p>Last index = <code class="docutils literal notranslate"><span class="pre">array.length</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></li>
+<li><p>Array size is fixed once created.</p></li>
+</ul>
+</section>
+<section id="array-methods">
+<h3>Array Methods<a class="headerlink" href="#array-methods" title="Link to this heading">#</a></h3>
+<p>Java provides a predefined utility class called <code class="docutils literal notranslate"><span class="pre">Arrays</span></code> inside the <code class="docutils literal notranslate"><span class="pre">java.util</span></code> package.<br />
+It contains several static methods to perform operations such as sorting, searching, comparing, copying, and filling arrays.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Important Arrays Class Methods</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.toString()</span></code></p></td>
+<td><p>Converts array into readable String</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.sort()</span></code></p></td>
+<td><p>Sorts array in ascending order</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.equals()</span></code></p></td>
+<td><p>Compares two arrays</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.copyOf()</span></code></p></td>
+<td><p>Copies an array</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.fill()</span></code></p></td>
+<td><p>Fills array with a specific value</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.binarySearch()</span></code></p></td>
+<td><p>Searches an element in a sorted array</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.stream()</span></code></p></td>
+<td><p>Converts array into Stream</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.deepToString()</span></code></p></td>
+<td><p>Prints multidimensional arrays</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.deepEquals()</span></code></p></td>
+<td><p>Compares multidimensional arrays</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.copyOfRange()</span></code></p></td>
+<td><p>Copies a specific range of elements</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.compare()</span></code></p></td>
+<td><p>Compares two arrays lexicographically</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.mismatch()</span></code></p></td>
+<td><p>Finds the first mismatching index</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.asList()</span></code></p></td>
+<td><p>converts an array into a List.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Arrays.parallelSort()</span></code></p></td>
+<td><p>to sort array elements in ascending order using parallel processing.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note: <strong>arr.length</strong> is a property used to find the length of the Array</p>
+</section>
+<section id="examples-of-important-array-methods">
+<h3>Examples of Important Array Methods<a class="headerlink" href="#examples-of-important-array-methods" title="Link to this heading">#</a></h3>
+<p><strong>1. Arrays.toString()</strong>
+Converts an array into a readable String representation.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">arr</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">10</span>,<span class="w"> </span><span class="m">20</span>,<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="m">40</span><span class="o">]</span>
+</pre></div>
+</div>
+<p><strong>2. Arrays.sort()</strong><br />
+Sorts array elements in ascending order.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">};</span>
+
+<span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">arr</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">10</span>,<span class="w"> </span><span class="m">20</span>,<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="m">40</span>,<span class="w"> </span><span class="m">50</span><span class="o">]</span>
+</pre></div>
+</div>
+<p><strong>3. Arrays.equals()</strong><br />
+Checks whether two arrays contain the same elements in the same order.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">};</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span><span class="w"> </span><span class="n">arr2</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">true</span>
+</pre></div>
+</div>
+<p><strong>4. Arrays.copyOf()</strong><br />
+Creates a new array by copying the original array.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">};</span>
+
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">newArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">copyOf</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">newArr</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">10</span>,<span class="w"> </span><span class="m">20</span>,<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span><span class="o">]</span>
+</pre></div>
+</div>
+<p><strong>5. Arrays.fill()</strong><br />
+Fills all array elements with the specified value.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="n">Arrays</span><span class="p">.</span><span class="na">fill</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">arr</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">100</span>,<span class="w"> </span><span class="m">100</span>,<span class="w"> </span><span class="m">100</span>,<span class="w"> </span><span class="m">100</span>,<span class="w"> </span><span class="m">100</span><span class="o">]</span>
+</pre></div>
+</div>
+<p><strong>6. Arrays.binarySearch()</strong><br />
+Searches for an element in a sorted array.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">2</span>
+</pre></div>
+</div>
+<p>Remember: Binary search should be performed on a sorted array to get reliable results.</p>
+<p><strong>7. Arrays.stream()</strong><br />
+Converts an array into a Stream so that we can perform operations using Java 8 Stream API.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+
+<span class="n">Arrays</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span>
+<span class="w">      </span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">30</span>
+<span class="m">40</span>
+<span class="m">50</span>
+</pre></div>
+</div>
+<p><strong>8. Arrays.copyOfRange()</strong><br />
+Copies elements from a specified start index to an end index (exclusive).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">newArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">copyOfRange</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">newArr</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="m">20</span>,<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="m">40</span><span class="o">]</span>
+</pre></div>
+</div>
+<p><strong>9. Arrays.deepToString()</strong><br />
+Used to print multidimensional arrays.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">deepToString</span><span class="p">(</span><span class="n">arr</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">[[</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="o">]]</span>
+</pre></div>
+</div>
+<p><strong>10. Arrays.deepEquals()</strong><br />
+Compares the contents of two multidimensional arrays.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">}};</span>
+<span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">}};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">deepEquals</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span><span class="w"> </span><span class="n">arr2</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">true</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="abstract-class">
+<h2>Abstract class<a class="headerlink" href="#abstract-class" title="Link to this heading">#</a></h2>
+<p>An abstract class in Java is a class declared using the <code class="docutils literal notranslate"><span class="pre">abstract</span></code> keyword. It is used to achieve abstraction and provides a common base for other classes.<br />
+An abstract class can contain:</p>
+<ol class="arabic simple">
+<li><p>Abstract methods and Concrete methods</p></li>
+<li><p>Constructors.</p></li>
+<li><p>Instance variables and static variables.</p></li>
+<li><p>Static and final methods.</p></li>
+</ol>
+<section id="why-do-we-use-abstract-classes">
+<h3>Why do we use Abstract Classes?<a class="headerlink" href="#why-do-we-use-abstract-classes" title="Link to this heading">#</a></h3>
+<p>We use abstract classes when multiple child classes share common properties and behaviours, but some behaviours need to be implemented differently by each child class.</p>
+<p><strong>Real-time example:</strong>
+Consider an Animal. Every animal makes a sound, but different animals make different sounds.</p>
+<ul class="simple">
+<li><p>Dog → Barks</p></li>
+<li><p>Cat → Meows</p></li>
+<li><p>Cow → Moos</p></li>
+</ul>
+<p>We can define a common abstract class called <code class="docutils literal notranslate"><span class="pre">Animal</span></code>.</p>
+<p><strong>Example of Abstract Class</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Abstract method</span>
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Concrete method</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal is eating&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Cat</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cat meows&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">a1</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">        </span><span class="n">a1</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cat</span><span class="p">();</span>
+<span class="w">        </span><span class="n">a2</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">        </span><span class="n">a2</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Dog<span class="w"> </span>barks
+Animal<span class="w"> </span>is<span class="w"> </span>eating
+Cat<span class="w"> </span>meows
+Animal<span class="w"> </span>is<span class="w"> </span>eating
+</pre></div>
+</div>
+<p><strong>Understanding the code</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abstract</span> <span class="pre">class</span> <span class="pre">Animal</span></code>: We cannot directly create an object of this class.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">abstract</span> <span class="pre">void</span> <span class="pre">sound()</span></code>: Method has no implementation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">eat()</span></code>: Concrete method with implementation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Dog</span> <span class="pre">extends</span> <span class="pre">Animal</span></code>: Dog inherits the Animal class.</p></li>
+<li><p>Dog and Cat must implement the inherited abstract method <code class="docutils literal notranslate"><span class="pre">sound()</span></code>.</p></li>
+</ul>
+<p><strong>Important Rules of Abstract Class</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rule</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Object creation</p></td>
+<td><p>Cannot create an object directly</p></td>
+</tr>
+<tr class="row-odd"><td><p>Constructor</p></td>
+<td><p>Can have constructors</p></td>
+</tr>
+<tr class="row-even"><td><p>Abstract methods</p></td>
+<td><p>Can have abstract methods</p></td>
+</tr>
+<tr class="row-odd"><td><p>Concrete methods</p></td>
+<td><p>Can have normal methods</p></td>
+</tr>
+<tr class="row-even"><td><p>Variables</p></td>
+<td><p>Can have instance, static and final variables</p></td>
+</tr>
+<tr class="row-odd"><td><p>Inheritance</p></td>
+<td><p>Can extend another class</p></td>
+</tr>
+<tr class="row-even"><td><p>Interface</p></td>
+<td><p>Can implement interfaces</p></td>
+</tr>
+<tr class="row-odd"><td><p>Method overriding</p></td>
+<td><p>Child class must implement inherited abstract methods unless it is also abstract</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Can Abstract Class Have a Constructor?</strong><br />
+Yes. An abstract class can have a constructor.<br />
+The constructor executes when a child-class object is created.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">Animal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal constructor&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">Dog</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog constructor&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Animal<span class="w"> </span>constructor
+Dog<span class="w"> </span>constructor
+Dog<span class="w"> </span>barks
+</pre></div>
+</div>
+<p>Why? When we create a Dog object, the parent class constructor executes first, followed by the child class constructor.</p>
+<p><strong>Can We Create an Abstract Class Reference?</strong><br />
+Yes! We cannot create an abstract class object, but we can create its reference.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Dog</span><span class="w"> </span><span class="n">barks</span>
+</pre></div>
+</div>
+<p>Interview point:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Animal</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Animal();</span></code> → Not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Animal</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Dog();</span></code> → Allowed.</p></li>
+</ul>
+<p>This is an example of runtime polymorphism.</p>
+<p><strong>Abstract Class vs Concrete Class</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Abstract Class</p></th>
+<th class="head"><p>Concrete Class</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Declared using <code class="docutils literal notranslate"><span class="pre">abstract</span></code> keyword</p></td>
+<td><p>Normal class</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cannot instantiate directly</p></td>
+<td><p>Can instantiate</p></td>
+</tr>
+<tr class="row-even"><td><p>Can contain abstract methods</p></td>
+<td><p>Cannot contain abstract methods</p></td>
+</tr>
+<tr class="row-odd"><td><p>Can contain concrete methods</p></td>
+<td><p>Contains implemented methods</p></td>
+</tr>
+<tr class="row-even"><td><p>Can have constructors</p></td>
+<td><p>Can have constructors</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading">#</a></h2>
+<p>It is used to achieve abstraction and supports multiple inheritance of type.<br />
+An interface defines a contract that implementing classes must follow.<br />
+We declare an interface using the <code class="docutils literal notranslate"><span class="pre">interface</span></code> keyword.</p>
+<section id="why-do-we-use-interfaces">
+<h3>Why do we use Interfaces?<a class="headerlink" href="#why-do-we-use-interfaces" title="Link to this heading">#</a></h3>
+<p>We use interfaces when different classes need to follow the same behaviour but can have different implementations.<br />
+<strong>Real-time example:</strong> Payment System<br />
+Consider different payment methods:</p>
+<ul class="simple">
+<li><p>Google Pay</p></li>
+<li><p>PhonePe</p></li>
+<li><p>Credit Card</p></li>
+</ul>
+<p>All payment methods perform payment, but their implementations are different.<br />
+We can define a common interface called <code class="docutils literal notranslate"><span class="pre">Payment</span></code>.</p>
+<p><strong>Basic Interface Example</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Payment</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">pay</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">GooglePay</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Payment</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pay</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Payment using Google Pay&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">PhonePe</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Payment</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pay</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Payment using PhonePe&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Payment</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GooglePay</span><span class="p">();</span>
+<span class="w">        </span><span class="n">p1</span><span class="p">.</span><span class="na">pay</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Payment</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PhonePe</span><span class="p">();</span>
+<span class="w">        </span><span class="n">p2</span><span class="p">.</span><span class="na">pay</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Payment<span class="w"> </span>using<span class="w"> </span>Google<span class="w"> </span>Pay
+Payment<span class="w"> </span>using<span class="w"> </span>PhonePe
+</pre></div>
+</div>
+</section>
+<section id="important-rules-of-interfaces">
+<h3>Important Rules of Interfaces<a class="headerlink" href="#important-rules-of-interfaces" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rule</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Object creation</p></td>
+<td><p>Cannot create an interface object directly</p></td>
+</tr>
+<tr class="row-odd"><td><p>Variables</p></td>
+<td><p>By default <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">final</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Abstract methods</p></td>
+<td><p>By default <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">abstract</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Constructor</p></td>
+<td><p>Cannot have constructors</p></td>
+</tr>
+<tr class="row-even"><td><p>Inheritance</p></td>
+<td><p>Interface can extend multiple interfaces</p></td>
+</tr>
+<tr class="row-odd"><td><p>Implementation</p></td>
+<td><p>A class can implement multiple interfaces</p></td>
+</tr>
+<tr class="row-even"><td><p>Default methods</p></td>
+<td><p>Supported from Java 8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Static methods</p></td>
+<td><p>Supported from Java 8</p></td>
+</tr>
+<tr class="row-even"><td><p>Private methods</p></td>
+<td><p>Supported from Java 9</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Variables declared inside an interface are automatically:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">final</span></code></p></li>
+</ul>
+<p>Interview point: We cannot modify interface variables because they are final.</p>
+</section>
+<section id="types-of-methods-in-interface">
+<h3>Types of Methods in Interface<a class="headerlink" href="#types-of-methods-in-interface" title="Link to this heading">#</a></h3>
+<p>Java interfaces support different types of methods.</p>
+<p><strong>1. Abstract Method</strong><br />
+A method without a body.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The implementing class must provide the implementation unless it is abstract.</p>
+<p><strong>2. Default Method (Java 8)</strong><br />
+A method with a body declared using the <code class="docutils literal notranslate"><span class="pre">default</span></code> keyword.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal is eating&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">eating</span>
+</pre></div>
+</div>
+<p><strong>Why do we use default methods?</strong><br />
+To add new methods to existing interfaces without forcing every existing implementing class to implement them.</p>
+<p><strong>3. Static Method (Java 8)</strong><br />
+Static methods belong to the interface itself.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animals have different sounds&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Animal</span><span class="p">.</span><span class="na">info</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Animals<span class="w"> </span>have<span class="w"> </span>different<span class="w"> </span>sounds
+</pre></div>
+</div>
+<p><strong>Note:</strong> To provide utility methods related to the interface without requiring an implementing class object.
+Remember: Call static interface methods using the interface name.</p>
+<p><strong>4. Private Method (Java 9)</strong><br />
+Private methods are used to share common implementation inside an interface.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal information&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">info</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="na">info</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Animal<span class="w"> </span>information
+</pre></div>
+</div>
+<p>Remember: Private interface methods cannot be accessed directly by implementing classes.</p>
+</section>
+<section id="multiple-inheritance-using-interfaces">
+<h3>Multiple Inheritance Using Interfaces<a class="headerlink" href="#multiple-inheritance-using-interfaces" title="Link to this heading">#</a></h3>
+<p>Java does not support multiple inheritance through classes, but it supports implementing multiple interfaces.
+Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">Pet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">play</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Animal</span><span class="p">,</span><span class="w"> </span><span class="n">Pet</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog is eating&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">play</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog is playing&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="na">play</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Dog<span class="w"> </span>is<span class="w"> </span>eating
+Dog<span class="w"> </span>is<span class="w"> </span>playing
+</pre></div>
+</div>
+<p>Here, Dog implements two interfaces: Animal and Pet.</p>
+</section>
+<section id="abstract-class-vs-interface">
+<h3>Abstract Class vs interface<a class="headerlink" href="#abstract-class-vs-interface" title="Link to this heading">#</a></h3>
+<p><strong>When would you choose an abstract class instead interface?</strong><br />
+If the classes have common state and common implementation, an abstract class may be more appropriate.</p>
+<p><strong>When should we use an interface?</strong><br />
+I would use an interface when I want to define a contract and allow multiple classes to provide different implementations. It helps achieve loose coupling, flexibility, and makes the code easier to test and maintain.</p>
+<p><strong>Important interview comparison:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Abstract Class</p></th>
+<th class="head"><p>Interface</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Declared using <code class="docutils literal notranslate"><span class="pre">abstract</span> <span class="pre">class</span></code></p></td>
+<td><p>Declared using <code class="docutils literal notranslate"><span class="pre">interface</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Can have constructors</p></td>
+<td><p>Cannot have constructors</p></td>
+</tr>
+<tr class="row-even"><td><p>Can have instance variables</p></td>
+<td><p>Variables are <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">final</span></code> by default</p></td>
+</tr>
+<tr class="row-odd"><td><p>Can have abstract and concrete methods</p></td>
+<td><p>Can have abstract, default, static and private methods</p></td>
+</tr>
+<tr class="row-even"><td><p>Supports single class inheritance</p></td>
+<td><p>Supports multiple interface implementation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Can have different access modifiers</p></td>
+<td><p>Abstract methods are public by default</p></td>
+</tr>
+<tr class="row-even"><td><p>Extended using <code class="docutils literal notranslate"><span class="pre">extends</span></code></p></td>
+<td><p>Implemented using <code class="docutils literal notranslate"><span class="pre">implements</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="important-interview-scenario-same-method-in-two-interfaces">
+<h3>Important Interview Scenario: Same Method in Two Interfaces<a class="headerlink" href="#important-interview-scenario-same-method-in-two-interfaces" title="Link to this heading">#</a></h3>
+<p><strong>What happens when two interfaces contain the same default method?</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Interface A&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">B</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Interface B&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Test class&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Test</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Test</span><span class="p">();</span>
+<span class="w">        </span><span class="n">t</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Test<span class="w"> </span>class
+</pre></div>
+</div>
+<p>Why? The implementing class must override the conflicting default method and provide its own implementation (or explicitly choose one using <code class="docutils literal notranslate"><span class="pre">A.super.display()</span></code> or <code class="docutils literal notranslate"><span class="pre">B.super.display()</span></code>).</p>
+<p>My suggestion: For your Java Developer interviews, focus especially on interface vs abstract class, multiple inheritance, default methods, static methods, and functional interfaces. These are commonly tested through coding questions.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Java Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="java-8-features.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Java 8 Features</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oop-concepts">OOP concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulation">Encapsulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">Inheritance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polymorphism">Polymorphism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstraction">Abstraction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-arrays-in-java">Types of Arrays in Java</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-array">One-Dimensional Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-methods">Array Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-important-array-methods">Examples of Important Array Methods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract-class">Abstract class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-abstract-classes">Why do we use Abstract Classes?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface">Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-use-interfaces">Why do we use Interfaces?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-rules-of-interfaces">Important Rules of Interfaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-methods-in-interface">Types of Methods in Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-inheritance-using-interfaces">Multiple Inheritance Using Interfaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract-class-vs-interface">Abstract Class vs interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-interview-scenario-same-method-in-two-interfaces">Important Interview Scenario: Same Method in Two Interfaces</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pushpabiligiri@gmail.com
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, pushpabiligiri@gmail.com.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
